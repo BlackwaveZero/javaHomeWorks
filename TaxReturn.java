@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.IOException;
-public class Template{
+public class TaxReturn{
     public static void main(String[] args) {
           taxtReturn tax=new taxtReturn(true);
     }
