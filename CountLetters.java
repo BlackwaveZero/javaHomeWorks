@@ -139,9 +139,12 @@ class Strings{
     }
     public boolean palindrome(){
         int len=this.len();
-        int half=len()/2;
-        if(half==0)
+        if(len==0)
             return false;
+        if(len==1)
+            return true;
+
+        int half=len/2;
         for(int i =0;i<half;i++){
             if(this.data.charAt(i)!=this.data.charAt(len-i-1))
                 return false;
@@ -152,13 +155,15 @@ class Strings{
         if(caseSensetive)
             return this.palindrome();
         int len=this.len();
-        int half=len()/2;
-        if(half==0)
+        if(len==0)
             return false;
-        int diff;
+        if(len==1)
+            return true;
+
+        int half=len/2;
+
         for(int i =0;i<half;i++){
-            diff=this.data.charAt(i)-this.data.charAt(len-i-1);
-            if(!(diff==-32 ||diff==32||diff==0) ||!isAlpha(this.data.charAt(i)))
+            if(this.lowerChar(this.data.charAt(i))!=this.data.charAt(len-i-1))
                 return false;
         }
         return true;
