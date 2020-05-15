@@ -1,5 +1,5 @@
 import java.util.*;
-public class CountLetters{
+public class ThreeLetterAcronym{
     public static void main(String[] args) {
         Strings str=new Strings();
         str.readLine("Enter a text : ");
